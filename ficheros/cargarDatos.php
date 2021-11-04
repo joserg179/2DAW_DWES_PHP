@@ -123,7 +123,9 @@ print_r($datos);
 crearTabla($datos);
 
 function crearTabla($datos){
+   '<table style="width:100%">';
    
+
 }
 
 //Cerramos el archivo
