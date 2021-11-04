@@ -107,21 +107,24 @@ while (($fila = fgetcsv($fichero)) == true)
 
 {  
 
-  print_r($fila);
-
- echo '<br>';
-
- //echo "FILA:".$fila[0]."-".$fila[1]."-".$fila[2];
-
- //array_push($datos,$fila);
-
- array_push($datos,explode(";",$fila[0]));
-
+ print_r($fila);
  
-
+ echo '<br>';
+ //echo "FILA:".$fila[0]."-".$fila[1]."-".$fila[2];
+ array_push($datos,$fila);
+ //array_push($datos,explode(";",$fila[0]));
 } // fin del bucle while que recorre las filas del fichero csv.
-
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<pre>';
 print_r($datos);
+
+crearTabla($datos);
+
+function crearTabla($datos){
+   
+}
 
 //Cerramos el archivo
 
@@ -129,10 +132,7 @@ fclose($fichero);
 
 
 function crearMensajeInfo($contenidoMensaje){
-
-
    $mensaje ='<div class="w3-container w3-red"><p>'.$contenidoMensaje.'</p></div>';
-
    return $mensaje;
 
 
