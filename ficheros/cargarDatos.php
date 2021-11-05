@@ -123,7 +123,17 @@ print_r($datos);
 crearTabla($datos);
 
 function crearTabla($datos){
-   '<table style="width:100%">';
+   $s= '<table border="2">';
+foreach ($datos as $r) {
+    $s .= '<tr>';
+    foreach ($r as $v) {
+            $s .= '<td>'.$v.'</td>';
+    }
+    $s .= '<tr>';
+}
+$s .= '</table>';
+
+echo $s;
    
 
 }
