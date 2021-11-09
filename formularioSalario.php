@@ -2,7 +2,6 @@
 <body>
 
 <?php
-
 $empleado = '';
 $horas = '';
 $valorhora = '';
