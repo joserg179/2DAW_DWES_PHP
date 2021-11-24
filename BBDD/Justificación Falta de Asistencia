@@ -55,21 +55,21 @@
                 <p>Faltó a clase en la/s fecha/s:</p>
                 <div class="input-field col s6">
                      
-                <input type = "date" id="fechainicio" name="fechainicio" class = "datepicker" />
+                <input type = "date" id="fechaInicio" name="fechaInicio" class = "datepicker" />
                 <!-- <label>Fecha Inicio</label>-->
               </div>  
               <div class="input-field col s6">
                             
-                <input type = "date" id="fechafin" name="fechafin" class = "datepicker" />
+                <input type = "date" id="fechaFin" name="fechaFin" class = "datepicker" />
                 <!-- <label>Fecha Fin</label>  -->
               </div>  <p>Número de horas:</p>
               <div class="input-field col s6">
-                <input id="horas" type="text" name="horas" class="validate">
-                <label for="horas">Horas lectivas</label>
+                <input id="horasLectivas" type="text" name="horasLectivas" class="validate">
+                <label for="horasLectivas">Horas lectivas</label>
               </div>
               <div class="input-field col s6">
-                <input id="complementarias"  name="complementarias" type="text" class="validate">
-                <label for="complementarias">Horas complementarias</label>
+                <input id="horasComplementarias"  name="horasComplementarias" type="text" class="validate">
+                <label for="horasComplementarias">Horas complementarias</label>
               </div>
               
               </div>
@@ -90,8 +90,8 @@
                   <span>Emergencia familiar</span>
                 </label>
                 <label>
-                  <input type="text" id="motivos" name="motivos" />
-                  <label for="motivos">Otros</label>
+                  <input type="text" id="otrosMotivos" name="otrosMotivos" />
+                  <label for="otrosMotivos">Otros</label>
                 </label>
               </p>
                 </div>
@@ -118,8 +118,8 @@
               <div class="row">
                 <p>Se adjuntan como constancia los siguientes documentos:</p>
                 <div class="input-field col s6">
-                  <input  id="constancia" type="text" name="constancia" class="validate">
-                  <label for="constancia">Constancia</label>
+                  <input  id="documentos" type="text" name="documentos" class="validate">
+                  <label for="documentos">Constancia</label>
                 </div>
               </div>
                                  
