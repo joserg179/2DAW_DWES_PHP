@@ -36,8 +36,8 @@
               </div>
               <!--Tabla Departamento-->
               <div class="input-field col s6">
-                <input id="profesor" type="text" name="profesor" class="validate">
-                <label for="profesor">Profesor/a de</label>
+                <input id="departamento" type="text" name="departamento" class="validate">
+                <label for="departamento">Profesor/a de</label>
               </div>
             </div>
           
