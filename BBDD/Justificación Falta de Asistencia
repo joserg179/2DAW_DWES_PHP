@@ -1,0 +1,242 @@
+   <meta charset="utf-8">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>          
+
+   <body>
+    <div class="container">
+
+      <!-- TÍTULOS -->
+      <div class="row">
+        <h3 class="header left teal-text">Justificación Falta de Asistencia</h3>
+      </div>
+        <div class="row">
+        <h5 class="header left teal-text">SUBTITULO FORMULARIO</h5>
+      </div>
+       
+      <form action="InsertarJustificacion.php" method="POST">
+           
+           <!-- CAMPOS INPUT TEXT -->
+           <!--Tabla Profesor-->
+            <div class="row">
+              <div class="input-field col s6">
+                <input  id="nombre" type="text" name="nombre" class="validate">
+                <label for="nombre">Don/Doña</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="dni" type="text" name="dni" class="validate">
+                <label for="dni">D.N.I</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="nrp" type="text" name="nrp" class="validate">
+                <label for="nrp">N.R.P</label>
+              </div>
+              <!--Tabla Departamento-->
+              <div class="input-field col s6">
+                <input id="profesor" type="text" name="profesor" class="validate">
+                <label for="profesor">Profesor/a de</label>
+              </div>
+            </div>
+          
+            <!-- CAMPOS TEXTAREA -->
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="address" class="materialize-textarea"></textarea>
+                  <label for="address">Observaciones</label>
+                </div>
+               
+              </div>
+              <!-- CAMPOS FECHA -->
+              <!--Tabla Justificación-->
+              <div class="row">
+                <p>Faltó a clase en la/s fecha/s:</p>
+                <div class="input-field col s6">
+                     
+                <input type = "date" id="fechainicio" name="fechainicio" class = "datepicker" />
+                <!-- <label>Fecha Inicio</label>-->
+              </div>  
+              <div class="input-field col s6">
+                            
+                <input type = "date" id="fechafin" name="fechafin" class = "datepicker" />
+                <!-- <label>Fecha Fin</label>  -->
+              </div>  <p>Número de horas:</p>
+              <div class="input-field col s6">
+                <input id="horas" type="text" name="horas" class="validate">
+                <label for="horas">Horas lectivas</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="complementarias"  name="complementarias" type="text" class="validate">
+                <label for="complementarias">Horas complementarias</label>
+              </div>
+              
+              </div>
+              <!-- CAMPOS CHECKBOX -->
+              <!--Tabla Motivos (Dentro del checkbox)--> <!--Tabla Otros(Dentro del textarea)-->
+              <div class="row">
+              <p>Faltó a clase por los siguientes motivos:</p>
+                <label>
+                  <input type="checkbox" id="motivos" name="motivos" />
+                  <span>Visita al médico</span>
+                </label>
+                <label>
+                  <input type="checkbox" id="motivos" name="motivos"/>
+                  <span>Cuidado de hijo</span>
+                </label>
+                <label>
+                  <input type="checkbox" id="motivos" name="motivos"/>
+                  <span>Emergencia familiar</span>
+                </label>
+                <label>
+                  <input type="text" id="motivos" name="motivos" />
+                  <label for="motivos">Otros</label>
+                </label>
+              </p>
+                </div>
+            </div>
+
+             <!--campo firma-->
+             <!--Tabla Justificación-->
+             <div class="row">
+              <p>Y para que conste y surte a los efectos oportunos, firma la presente en Navalmoral de la Mata a:</p>
+              <div class="input-field col s6">                     
+                <input type = "date" id="fechaFirma" name="fechaFirma" class = "datepicker" />
+                </div>
+              </div> 
+              <div class="row">
+                <div class="input-field col s6">
+                  <p>Firma del Profesor/a:</p>
+                  <input id="firma" type="text" name="firma" class="validate">
+                  <label for="firma">Fdo</label>
+                </div> 
+              </div>
+
+              <!--campo constancia-->
+              <!--Tabla Documentos-->
+              <div class="row">
+                <p>Se adjuntan como constancia los siguientes documentos:</p>
+                <div class="input-field col s6">
+                  <input  id="constancia" type="text" name="constancia" class="validate">
+                  <label for="constancia">Constancia</label>
+                </div>
+              </div>
+                                 
+              <input type="button" id="btn" value="Enviar">
+            </form>
+            
+            <!-- CAMPOS RADIOBUTTONS -->
+            <div class="row">
+              <p>
+                <p>
+                    <label>
+                      <input name="group1" type="radio" checked />
+                      <span>Opción 1</span>
+                    </label>
+                 
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>Opción 2</span>
+                    </label>
+                  </p>
+              </p>
+            </div>
+
+            <!-- CAMPOS SELECT -->
+              <div class = "row">
+                <label>Opciones</label>
+                   <select>
+                      <option value = "" disabled selected>Seleccione una fruta</option>
+                      <option value = "1">Mango</option>
+                      <option value = "2">Naranja</option>
+                      <option value = "3">Manzana</option>
+                   </select>               
+                </div>
+
+              <!-- BOTON -->
+            <div class = "row">
+              <a class="waves-effect waves-light btn">Aceptar</a>
+            </div>
+            </form>
+
+             <!-- TABLA -->   
+                <div class = "row">
+              <table>
+                <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Apellidos</th>
+                      <th>Edad</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>34</td>
+                    <td>  <a class="waves-effect waves-light btn  teal lighten-3">Ver</a></td>
+                    <td>  <a class="waves-effect waves-light btn">Editar</a></td>
+                    <td>  <a class="waves-effect waves-light btn red lighten-2">Eliminar</a></td>
+                  </tr>
+                  <tr>
+                    <td>Alan</td>
+                    <td>Jellybean</td>
+                    <td>21</td>
+                    <td>  <a class="waves-effect waves-light btn  teal lighten-3">Ver</a></td>
+                    <td>  <a class="waves-effect waves-light btn">Editar</a></td>
+                    <td>  <a class="waves-effect waves-light btn red lighten-2">Eliminar</a></td>
+                  </tr>
+                  <tr>
+                    <td>Jonathan</td>
+                    <td>Lollipop</td>
+                    <td>56</td>
+                    <td>  <a class="waves-effect waves-light btn  teal lighten-3">Ver</a></td>
+                    <td>  <a class="waves-effect waves-light btn">Editar</a></td>
+                    <td>  <a class="waves-effect waves-light btn red lighten-2">Eliminar</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+
+              <!-- PIE DE PÁGINA -->
+            <footer class="page-footer teal lighten-2">
+              <div class="row">
+                 <div class="col s12 m6 l6">
+                    <h5 class="white-text">Aplicación</h5>
+                 </div>
+                 
+              </div>
+              
+           </footer>
+          </div>
+
+
+    </div>
+
+
+
+  </body>
+
+  <script>
+  //Evento para el select
+    document.addEventListener('DOMContentLoaded', function() {
+   var elems = document.querySelectorAll('select');
+   var options = document.querySelectorAll('option');
+   var instances = M.FormSelect.init(elems, options); })
+
+
+   //Evento para los campos fecha
+   document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    
+  });
+ </script>
+
+
+   
+
+maqueta.html
+Mostrando maqueta.html.
