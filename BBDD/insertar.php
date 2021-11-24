@@ -12,23 +12,25 @@ if (!$con) {
  die("Error en la conexión: " . mysqli_connect_error());
 }
 
-// preparar y vincular
-$stmt = $con->prepare("INSERT INTO participantes (nombre, numero, email ) VALUES (?, ?, ?)");
-$stmt->bind_param("sis", $nombre, $numero, $email);
+$nombre='';
+$numero=0;
+$email='sin email';
+
+if(isset($_POST['nombre'])){
+    $nombre=$_POST['nombre'];
+}
+if(isset($_POST['numero'])){
+    $numero=$_POST['numero'];
+}
+if(isset($_POST['email'])){
+    $email=$_POST['email'];
+}
 
 
-// establecemos los parámetros y ejecutamos
+$ejecutar = "INSERT INTO participantes(nombre,numero,email) VALUES('$nombre','$numero','$email')";
 
-$stmt->execute();
 
-$stmt->execute();
 
-$stmt->execute();
 
-echo "Las filas se han insertado correctamente";
-
-$stmt->close();
-
-$con->close();
 
 ?>
